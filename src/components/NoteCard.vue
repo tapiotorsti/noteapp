@@ -1,15 +1,15 @@
 <template>
-    <div class="note">
+    <div class="notecard">
       <h1>Note</h1>
     </div>
   </template>
 
 <script>
 export default {
-  name: 'Note'
+  name: 'NoteCard'
 }
 </script>
 
 <style lang="scss">
-@import '../assets/note.scss';
+@import '../assets/notecard.scss';
 </style>

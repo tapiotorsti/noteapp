@@ -1,21 +1,21 @@
 <template>
   <div id="app">
-    <Header />
+    <NoteHeader />
     <NoteBoard />
-    <Footer />
+    <NoteFooter />
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
+import NoteHeader from './components/NoteHeader.vue'
+import NoteFooter from './components/NoteFooter.vue'
 import NoteBoard from './components/NoteBoard.vue';
 
 export default {
   name: 'App',
   components: {
-    Header,
-    Footer,
+    NoteHeader,
+    NoteFooter,
     NoteBoard
   }
 }

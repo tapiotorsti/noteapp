@@ -6,10 +6,10 @@
   
   <script>
   export default {
-    name: 'Footer'
+    name: 'NoteFooter'
   }
   </script>
   
   <style lang="scss">
-  @import '../assets/footer.scss';
+  @import '../assets/notefooter.scss';
   </style>

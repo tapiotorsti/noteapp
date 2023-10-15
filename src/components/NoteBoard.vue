@@ -1,17 +1,17 @@
 <template>
     <div class="noteboard">
       <h1>NoteApp</h1>
-      <Note />
+      <NoteCard />
     </div>
   </template>
 
 <script>
-import Note from './Note.vue';
+import NoteCard from './NoteCard.vue';
 
 export default {
   name: 'NoteBoard',
   components: {
-    Note, // Register the Note component for use in this template
+    NoteCard, // Register the Note component for use in this template
   },
 }
 </script>
