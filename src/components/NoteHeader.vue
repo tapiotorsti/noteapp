@@ -11,5 +11,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/header.scss';
+@import '../assets/noteheader.scss';
 </style>

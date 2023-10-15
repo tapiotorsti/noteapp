@@ -1,3 +1,16 @@
-.note {
-    background-color: #FFFF00;
+.notecard {
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-color: #ffeb3b;
+    box-shadow: 10px 10px 5px grey;
+    margin: 20px;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+
+    h1 {
+        margin: 0;
+        padding: 0;
+    }
 }
