@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <NoteHeader />
-    <NoteBoard />
+    <NoteHeader @openModal="showModal = true" />
+    <NoteBoard :showModal="showModal" @closeModal="showModal = false"/>
     <NoteFooter />
   </div>
 </template>
@@ -17,6 +17,11 @@ export default {
     NoteHeader,
     NoteFooter,
     NoteBoard
+  },
+  data() {
+    return {
+      showModal: false
+    }
   }
 }
 </script>
