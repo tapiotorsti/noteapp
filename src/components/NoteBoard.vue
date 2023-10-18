@@ -1,39 +1,36 @@
 <template>
   <div class="noteboard">
     <NoteCard v-for="(note, index) in notes" :key="index" :note="note" />
-    <div v-if="showModal" class="modal">
-      <div class="modal-content">
-        <span class="close-button" @click="$emit('closeModal')">×</span>
-        <input v-model="newNote" placeholder="Enter note text" />
-        <button @click="addNote">Save</button>
-      </div>
-    </div>
+    <add-note-modal :showModal="showModal" @addNote="addNote" @closeModal="closeModal" />
   </div>
 </template>
 
 <script>
 import NoteCard from './NoteCard.vue';
+import AddNoteModal from './AddNoteModal.vue';
 
 export default {
   name: 'NoteBoard',
   components: {
     NoteCard,
+    AddNoteModal,
   },
   props: ['showModal'],
   data() {
     return {
-      newNote: '',
-      notes: []
-    }
+      notes: [],
+    };
   },
   methods: {
-    addNote() {
-      this.notes.push(this.newNote);
-      this.newNote = '';
+    addNote(newNote) {
+      this.notes.push(newNote);
+      this.closeModal();
+    },
+    closeModal() {
       this.$emit('closeModal');
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style lang="scss">

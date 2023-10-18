@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <NoteHeader @openModal="showModal = true" />
-    <NoteBoard :showModal="showModal" @closeModal="showModal = false"/>
+    <NoteBoard :showModal="showModal" @addNote="addNote" @closeModal="showModal = false" />
     <NoteFooter />
   </div>
 </template>
 
 <script>
-import NoteHeader from './components/NoteHeader.vue'
-import NoteFooter from './components/NoteFooter.vue'
+import NoteHeader from './components/NoteHeader.vue';
+import NoteFooter from './components/NoteFooter.vue';
 import NoteBoard from './components/NoteBoard.vue';
 
 export default {
@@ -16,15 +16,21 @@ export default {
   components: {
     NoteHeader,
     NoteFooter,
-    NoteBoard
+    NoteBoard,
   },
   data() {
     return {
-      showModal: false
-    }
-  }
-}
+      showModal: false,
+    };
+  },
+  methods: {
+    addNote() {
+      this.showModal = false;
+    },
+  },
+};
 </script>
+
 
 <style scoped>
 /* Your CSS for App.vue goes here */
