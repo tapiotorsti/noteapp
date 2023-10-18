@@ -1,6 +1,5 @@
 .notecard {
-    display: block;
-    width: 200px;
+    max-width: calc(33.33% - 40px); /* Set a maximum width for the notecard */
     height: 200px;
     background-color: #ffeb3b;
     box-shadow: 10px 10px 5px grey;
@@ -8,9 +7,12 @@
     padding: 20px;
     text-decoration: none;
     color: black;
-
+    min-width: 13rem;
+    box-sizing: border-box;
+    transition: all 0.3s;
+  
     h1 {
-        margin: 0;
-        padding: 0;
+      margin: 0;
+      padding: 0;
     }
-}
+  }

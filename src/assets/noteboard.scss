@@ -1,13 +1,9 @@
 .noteboard {
-    background-color: #c2a678;
-    background-image:
-        radial-gradient(circle at 100% 150%, #c2a678 24%, #b68c60 10%, #c2a678 40%),
-        radial-gradient(circle at 10% 20%, #c2a678 0%, #b68c60 50%, #c2a678 100%),
-        radial-gradient(circle at 10% 80%, #c2a678 0%, #b68c60 20%, #c2a678 80%),
-        radial-gradient(circle at 90% 30%, #c2a678 0%, #b68c60 50%, #c2a678 100%),
-        radial-gradient(circle at 30% 30%, black 0%, #b68c60 80%, #c2a678 100%);
-    background-size:450px 450px;
-    padding: 10px;
-    min-height: 20rem;
+  background-color: #c2a678;
+  background-size: 450px 450px;
+  padding: 10px;
+  min-height: 20rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
-  
