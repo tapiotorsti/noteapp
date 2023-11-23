@@ -11,7 +11,7 @@ This is a simple Vue.js application created for the purpose of practicing Vue.js
 - Vue.js
 - Firebase
 - Firestore
-- 
+  
 ## Features
 
 ### Basic Vue App:
