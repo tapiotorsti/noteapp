@@ -1,14 +1,16 @@
 <template>
   <div class="notecard">
-    <h1>{{ note }}</h1>
+    <p>{{ note.content }}</p>
   </div>
 </template>
 
 <script>
 export default {
   name: 'NoteCard',
-  props: ['note']
-}
+  props: {
+    note: Object,
+  },
+};
 </script>
 
 <style lang="scss">

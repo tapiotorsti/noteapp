@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <NoteHeader @openModal="showModal = true" />
-    <NoteBoard :showModal="showModal" @addNote="addNote" @closeModal="showModal = false" />
+    <NoteBoard :showModal="showModal" @addNote="addNote" @update:showModal="showModal = $event" />
     <NoteFooter />
   </div>
 </template>
@@ -23,6 +23,11 @@ export default {
       showModal: false,
     };
   },
+  watch: {
+    showModal(newVal) {
+      console.log('showModal changed:', newVal);
+    },
+  },
   methods: {
     addNote() {
       this.showModal = false;
@@ -33,5 +38,5 @@ export default {
 
 
 <style scoped>
-/* Your CSS for App.vue goes here */
+/* CSS goes here */
 </style>

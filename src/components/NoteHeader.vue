@@ -2,6 +2,7 @@
   <header>
     <h1>NoteApp</h1>
     <font-awesome-icon class="add-button" icon="plus" @click="$emit('openModal')" />
+
   </header>
 </template>
 
