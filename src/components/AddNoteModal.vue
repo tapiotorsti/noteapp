@@ -1,9 +1,13 @@
 <template>
-  <div v-if="showModal" class="modal">
-    <div class="modal-content">
+  <div v-if="showModal">
+    <div class="modal-content add-note-modal">
       <span class="close-button" @click="closeModal">x</span>
-      <input v-model="content" placeholder="Enter note text" />
-      <button @click="addNote">Save</button>
+      <div class="input-container">
+        <input v-model="content" placeholder=" " />
+      </div>
+      <div class="save-button-container">
+        <button class="save-button" @click="addNote">Save</button>
+      </div>
     </div>
   </div>
 </template>
@@ -19,8 +23,10 @@ export default {
     const content = ref('');
 
     const closeModal = () => {
-  emit('close');
-};
+      emit('update:showModal', false);
+    };
+
+
     const addNote = () => {
       const newNote = {
         title: title.value,
@@ -30,7 +36,7 @@ export default {
       // Emit the 'addNote' event with the new note data
       emit('add-note', newNote);
 
-      // Emit the 'closeModal' event to request the parent to close the modal
+      // Emit the 'closeModal' event
       closeModal();
     };
 
