@@ -1,7 +1,7 @@
 <template>
   <header>
     <h1>NoteApp</h1>
-    <font-awesome-icon class="add-button" icon="plus" @click="$emit('openModal')" />
+    <font-awesome-icon class="add-button" icon="plus" @click="openModal" />
 
   </header>
 </template>
@@ -17,7 +17,13 @@ export default {
 name: 'NoteHeader',
 components: {
   FontAwesomeIcon
+},
+methods: {
+  openModal() {
+    this.$emit('update:showModal', true);
+  },
 }
+
 }
 </script>
 

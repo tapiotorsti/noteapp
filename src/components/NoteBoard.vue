@@ -1,7 +1,7 @@
 <template>
   <div class="noteboard">
     <NoteCard v-for="(note, index) in notes" :key="index" :note="note" />
-    <add-note-modal :showModal="showModal" @add-note="addNote" @close="showModal = false" />
+    <AddNoteModal :showModal="showModal" @add-note="addNote" @update:showModal="updateShowModal" />
 
   </div>
 </template>
@@ -38,7 +38,7 @@ export default {
 
     newNote.id = docRef.id;
     this.notes.push(newNote);
-    this.closeModal();
+    this.$emit('update:showModal', false);
   } catch (error) {
     console.error('Error adding note to Firestore: ', error);
   }
@@ -49,6 +49,9 @@ export default {
     },
     openModal() {
       this.$emit('update:showModal', true); 
+    },
+    updateShowModal(value) {
+      this.$emit('update:showModal', value);
     },
   },
 };

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <NoteHeader @openModal="showModal = true" />
-    <NoteBoard :showModal="showModal" @addNote="addNote" @update:showModal="showModal = $event" />
+    <NoteHeader @update:showModal="updateShowModal" />
+    <NoteBoard :showModal="showModal" @addNote="addNote" @update:showModal="updateShowModal" />
     <NoteFooter />
   </div>
 </template>
@@ -32,6 +32,9 @@ export default {
     addNote() {
       this.showModal = false;
     },
+    updateShowModal(value) {
+    this.showModal = value;
+  },
   },
 };
 </script>
