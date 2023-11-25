@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="app">
     <NoteHeader @update:showModal="updateShowModal" />
     <NoteBoard :showModal="showModal" @addNote="addNote" @update:showModal="updateShowModal" />
     <NoteFooter />
@@ -41,5 +41,5 @@ export default {
 
 
 <style scoped>
-/* CSS goes here */
+  @import 'assets/app.scss';
 </style>

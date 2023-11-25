@@ -1,9 +1,10 @@
 .noteboard {
-  background-color: #c2a678;
-  background-size: 450px 450px;
-  padding: 10px;
-  min-height: 20rem;
   display: flex;
+  background-color: #c2a678;
+  background-size: auto;
+  padding: 10px;
+  min-height: 100vh;
+  height: auto;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  align-content: flex-start;
 }
