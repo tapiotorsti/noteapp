@@ -1,4 +1,4 @@
-#  noteapp
+#  noteapp (keskeneräinen)
 
 
 # Vue Practice App with Firebase and Firestore
